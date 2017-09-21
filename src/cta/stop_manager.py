@@ -1,4 +1,7 @@
+from cta import app
+
 import pandas
+
 
 class StopRouteManager(object):
     def __init__(self, df):
@@ -37,3 +40,7 @@ def get_data():
     """ This should read the csv and return an unprocessed DataFrame """
     pass
 
+
+@app.route('/')
+def index():
+    return 'Hello World!'
